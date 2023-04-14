@@ -1,0 +1,64 @@
+.playlist-item {
+  display: flex;
+  padding: 0.5rem 1rem;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  &:hover {
+    background-color: #f1f8ff;
+    cursor: pointer;
+
+    & .playlist-item__actions {
+      display: flex;
+    }
+  }
+
+  & .playlist-item__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    & .playlist-item__info-name {
+      color: #000000d9;
+      font-weight: 500;
+      font-size: 0.875rem;
+    }
+
+    & .playlist-item__info-tag {
+      background-color: #dbedff;
+      font-weight: 500;
+      color: #0366d6;
+      font-size: 0.75rem;
+      padding: 0.25rem 0.5rem;
+    }
+  }
+
+  & .playlist-item__actions {
+    display: flex;
+    gap: 1rem;
+    display: none;
+
+    & button {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font-size: 1rem;
+
+      &.playlist-item__actions-play {
+        background: #0366d6;
+        color: #fff;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+      }
+
+      &.playlist-item__actions-action {
+        font-size: 1.5 rem;
+        font-weight: 500;
+        color: #000000d9;
+      }
+    }
+  }
+}
